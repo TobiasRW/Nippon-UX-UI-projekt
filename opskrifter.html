@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opskrifter</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
+     <script src="https://kit.fontawesome.com/792c2f7dda.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <div class="hamburger" onclick="hamBurgerClick()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/index.html">Forside</a></li>
+                <li class="nav-item"><a href="/opskrifter.html">Opskrifter</a></li>
+                <li class="nav-item"><a href="/profil.html">Profil</a></li>
+                <li class="nav-item"><a href="/about.html">Om Nippon</a></li>
+            </ul>
+           <a href="/index.html"> <img class="logo" src="/img/logo.png" alt="Company logo"></a>
+           <a href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+    </header>
+    <main>
+        <ul class="breadcrumb">
+            <li class="crumb"><a href="/index.html">Forside</a></li>
+            <li class="crumb">Opskrifter</li>
+        </ul>
+        <section class="welcome">
+            <h1>Opskrifter</h1>
+        </section>
+
+        <div class="reset-cont">
+            <button class="reset-filter" onclick="filterSelection('all')">Nulstil Filtrering</button>
+        </div>
+        <div id="myBtnContainer">
+            <button class="filter-btn" onclick="filterSelection('fast')">Nemt og Hurtigt</button>
+            <button class="filter-btn" onclick="filterSelection('veg')">Vegetar</button>
+            <button class="filter-btn" onclick="filterSelection('gluten')">Glutenfri</button>
+            <button class="filter-btn" onclick="filterSelection('budget')">Budget</button>
+            <button class="filter-btn" onclick="filterSelection('fam')">Familievenligt</button>
+            <button class="filter-btn" onclick="filterSelection('fish')">Fisk</button>
+            <button class="filter-btn" onclick="filterSelection('classic')">Klassisk twist</button>
+            <button class="filter-btn" onclick="filterSelection('meat')">Kød</button>
+            <button class="filter-btn" onclick="filterSelection('lux')">Luksuriøst</button>
+        </div>
+
+        <section class="persons">
+            <h2>Antal personer</h2>
+            <button class="xPeople">1 Person</button>
+            <button class="xPeople">2 Personer</button>
+            <button class="xPeople">4 Personer</button>
+        </section>
+
+        <section class="pop-meals recipies">
+            <div class="filter-wrapper filter-elem fast veg">
+                <div class="square squareWidth">
+                    <img src="/img/dumpling.webp" alt="dumpling dish" class="meal-pic">
+                    <p class="meal-heading">Japanske dumplings</p>
+                    <div class="icon-container">
+                        <div class="timer-container">
+                            <i class="ph-timer"></i>
+                            <p>25min</p>
+                        </div>
+                        <div>
+                            <img class="icon" src="/img/icon-01.png" alt="Chili icon">
+                            <img class="icon" src="/img/icon-02.png" alt="Vegetarian icon">
+                            <img class="icon" src="/img/icon-10.png" alt="Gluten icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="read-more">
+                    <a href="/dumpling.html">Læs mere</a>
+                    <a href="#">Læg i kurv</a>
+                </div>
+            </div>
+            <div class="filter-wrapper filter-elem fam meat fast">
+                <div class="square squareWidth">
+                    <img class="meal-pic" src="/img/noodles-spicy.webp" alt="Noodle dish">
+                    <p class="meal-heading">Spicy Nuddelsalat</p>
+                    <div class="icon-container">
+                        <div class="timer-container">
+                            <i class="ph-timer"></i>
+                            <p>35min</p>
+                        </div>
+                        <div>
+                            <img class="icon" src="/img/icon-06.png" alt="Nut icon">
+                            <img class="icon" src="/img/icon-01.png" alt="Chili icon">
+                            <img class="icon" src="/img/icon-02.png" alt="Vegetarian icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="read-more">
+                    <a href="#">Læs mere</a>
+                    <a href="#">Læg i kurv</a>
+                </div>
+            </div>
+            <div class="filter-wrapper filter-elem gluten fish meat lux">
+                <div class="square squareWidth">
+                    <img class="meal-pic" src="/img/sushi-plate.webp" alt="Shusi dish">
+                    <p class="meal-heading">Blandet Sushi</p>
+                    <div class="icon-container">
+                        <div class="timer-container">
+                            <i class="ph-timer"></i>
+                            <p>50min</p>
+                        </div>
+                        <div>
+                            <img class="icon" src="/img/icon-08.png" alt="Fish icon">
+                            <img class="icon" src="/img/icon-09.png" alt="Milk icon">
+                            <img class="icon" src="/img/icon-03.png" alt="Gluten free icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="read-more">
+                    <a href="#">Læs mere</a>
+                    <a href="#">Læg i kurv</a>
+                </div>
+            </div>
+            <div class="filter-wrapper filter-elem fade fam budget fish meat classic">
+                <div class="square squareWidth">
+                    <img class="meal-pic" src="/img/congee.png" alt="Congee dish">
+                    <p class="meal-heading">Japanske Congee</p>
+                    <div class="icon-container">
+                        <div class="timer-container">
+                            <i class="ph-timer"></i>
+                            <p>40min</p>
+                        </div>
+                        <div>
+                            <img class="icon" src="/img/icon-08.png" alt="Fish icon">
+                            <img class="icon" src="/img/icon-06.png" alt="Nu icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="read-more">
+                    <a href="#">Læs mere</a>
+                    <a href="#">Læg i kurv</a>
+                </div>
+            </div>
+            <div class="filter-wrapper filter-elem fade fast budget meat classic">
+                <div class="square squareWidth">
+                    <img class="meal-pic" src="/img/japansk-frik.png" alt="Meatball dish">
+                    <p class="meal-heading">Japanske Frikadeller</p>
+                    <div class="icon-container">
+                        <div class="timer-container">
+                            <i class="ph-timer"></i>
+                            <p>35min</p>
+                        </div>
+                        <div>
+                            <img class="icon" src="/img/icon-01.png" alt="Chili icon">
+                            <img class="icon" src="/img/icon-04.png" alt="But free icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="read-more">
+                    <a href="#">Læs mere</a>
+                    <a href="#">Læg i kurv</a>
+                </div>
+            </div>
+            <div class="filter-wrapper filter-elem fade veg">
+                <div class="square squareWidth">
+                    <img class="meal-pic" src="/img/spring-rolls.png" alt="Spring roll dish">
+                    <p class="meal-heading">Japanske Forårsruller</p>
+                    <div class="icon-container">
+                        <div class="timer-container">
+                            <i class="ph-timer"></i>
+                            <p>45min</p>
+                        </div>
+                        <div>
+                            <img class="icon" src="/img/icon-01.png" alt="Chili icon">
+                            <img class="icon" src="/img/icon-02.png" alt="Vegetarian icon">
+                            <img class="icon" src="/img/icon-10.png" alt="Gluten icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="read-more">
+                    <a href="#">Læs mere</a>
+                    <a href="#">Læg i kurv</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="contact">
+            <h4>Kontakt</h4>
+            <ul>
+                <li>nippon@nipponmail.dk</li>
+                <li>Tlf: 12 34 56 78</li>
+                <li>Nippongade 36, 1234 Nipponhus</li>
+            </ul>
+        </section>
+        <section class="so-me">
+            <h4>Sociale Medier</h4>
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+            </ul>
+        </section>
+        <nav class="footer-nav">
+            <h4>Menupunkter</h4>
+            <ul>
+                <li><a href="/index.html">Forside</a></li>
+                <li><a href="/opskrifter.html">Opskrifter</a></li>
+                <li><a href="/about.html">Om Nippon</a></li>
+                <li><a href="/profil.html">Profil</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+    <script src="/js/main.js"></script>
+    <script src="/js/filter.js"></script>
+    <script src="/js/fadein.js"></script>
+</body>
+</html>

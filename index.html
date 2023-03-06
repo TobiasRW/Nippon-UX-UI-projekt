@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nippon</title>
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/792c2f7dda.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <div class="hamburger" onclick="hamBurgerClick()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="/opskrifter.html">Opskrifter</a></li>
+                <li class="nav-item"><a onclick="loadProfile()" href="#">Profil</a></li>
+                <li class="nav-item"><a href="/about.html">Om Nippon</a></li>
+            </ul>
+           <a href="/index.html"> <img class="logo" src="/img/logo.png" alt="Company Logo"></a>
+           <a href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner">
+            <!-- <img class="banner-pic" src="/img/banner.jpg" alt=""> -->
+        </section>
+        <div id="modal-cont">
+            <div class="modal-box">
+                <i class="fa-solid fa-xmark" onclick="closeModal()"></i>
+                <form name="loginForm" class="login-box">
+                  <h3>Login</h3>
+                    <input placeholder="Brugernavn" type="text" class="name" name="user" required>
+                    <input placeholder="Kodeord" type="password" class="password" name="pass" required>
+                  <a class="login-modal">Login</a>
+                  <div class="other-log">
+                    <p class="modal-log-text"></p>
+                    <p>Eller login med</p>
+                  <a class="google-log"><i class="fa-brands fa-google"></i></a>
+                  <a class="face-log"><i class="fa-brands fa-facebook"></i></a>
+                  </div>
+                </form>
+            </div>
+        </div>
+        <section class="welcome">
+            <h1>Velkommen til Nippon</h1>
+        </section>
+        <div class="user-slider-wrapper">
+            <section class="user fade-in from-bottom">
+                <h4>Bland din egen måltidskasse med 
+                    japansk inspirerede retter</h4>
+                <a href="/opskrifter.html" class="green-btn">Opskrifter</a>
+                <a href="#" onclick="openModal()" class="green-btn login-btn">Login</a>
+                <a href="/profil.html" class="green-btn profile-btn">Profil</a>
+                <a href="#" class="create-user">Opret Bruger</a>
+            </section>
+            <section class="pop-meals fade-in from-bottom">
+                <h2>Poplære Retter</h2>
+                <div class="meals-wrapper fade">
+                    <div class="square squareWidth">
+                        <img class="meal-pic" src="/img/dumpling.webp" alt="Picture of dumpling dish">
+                        <p class="meal-heading">Japanske Dumplings</p>
+                        <div class="icon-container">
+                            <div class="timer-container">
+                                <i class="ph-timer"></i>
+                                <p>25min</p>
+                            </div>
+                            <div>
+                                <img class="icon" src="/img/icon-01.png" alt="Chili icon">
+                                <img class="icon" src="/img/icon-02.png" alt="Vegetarian icon">
+                                <img class="icon" src="/img/icon-10.png" alt="Gluten icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="read-more">
+                        <a href="/dumpling.html">Læs mere</a>
+                    </div>
+                </div>
+                <div class="meals-wrapper fade">
+                    <div class="square squareWidth">
+                        <img class="meal-pic" src="/img/noodles-spicy.webp" alt="Picture of noodle dish">
+                        <p class="meal-heading">Spicy Nuddelsalat</p>
+                        <div class="icon-container">
+                            <div class="timer-container">
+                                <i class="ph-timer"></i>
+                                <p>35min</p>
+                            </div>
+                            <div>
+                                <img class="icon" src="/img/icon-06.png" alt="Nut icon">
+                                <img class="icon" src="/img/icon-01.png" alt="Chili icon">
+                                <img class="icon" src="/img/icon-02.png" alt="Vegetarian icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="read-more">
+                        <a href="#">Læs mere</a>
+                    </div>
+                </div>
+                <div class="meals-wrapper fade">
+                    <div class="square squareWidth">
+                        <img class="meal-pic" src="/img/sushi-plate.webp" alt="Pictore of sushi dish">
+                        <p class="meal-heading">Blandet Sushi</p>
+                        <div class="icon-container">
+                            <div class="timer-container">
+                                <i class="ph-timer"></i>
+                                <p>50min</p>
+                            </div>
+                            <div>
+                                <img class="icon" src="/img/icon-08.png" alt="Fish icon">
+                                <img class="icon" src="/img/icon-09.png" alt="Milk icon">
+                                <img class="icon" src="/img/icon-03.png" alt="Gluten free icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="read-more">
+                        <a href="#">Læs mere</a>
+                    </div>
+                </div>
+                <div class="meals-wrapper fade">
+                    <div class="square squareWidth">
+                        <img class="meal-pic" src="/img/congee.png" alt="Picture of congee dish">
+                        <p class="meal-heading">Japanske Congee</p>
+                        <div class="icon-container">
+                            <div class="timer-container">
+                                <i class="ph-timer"></i>
+                                <p>40min</p>
+                            </div>
+                            <div>
+                                <img class="icon" src="/img/icon-08.png" alt="Fish icon">
+                                <img class="icon" src="/img/icon-06.png" alt="Nut icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="read-more">
+                        <a href="#">Læs mere</a>
+                    </div>
+                </div>
+                <div class="meals-wrapper fade">
+                    <div class="square squareWidth">
+                        <img class="meal-pic" src="/img/japansk-frik.png" alt="Picture of meatball dish">
+                        <p class="meal-heading">Japanske Frikadeller</p>
+                        <div class="icon-container">
+                            <div class="timer-container">
+                                <i class="ph-timer"></i>
+                                <p>35min</p>
+                            </div>
+                            <div>
+                                <img class="icon" src="/img/icon-01.png" alt="Chili icon">
+                                <img class="icon" src="/img/icon-04.png" alt="Nut free icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="read-more">
+                        <a href="#">Læs mere</a>
+                    </div>
+                </div>
+                <div class="meals-wrapper fade">
+                    <div class="square squareWidth">
+                        <img class="meal-pic" src="/img/spring-rolls.png" alt="Picture of spring rolls dish">
+                        <p class="meal-heading">Japanske Forårsruller</p>
+                        <div class="icon-container">
+                            <div class="timer-container">
+                                <i class="ph-timer"></i>
+                                <p>45min</p>
+                            </div>
+                            <div>
+                                <img class="icon" src="/img/icon-01.png" alt="Chili icon">
+                                <img class="icon" src="/img/icon-02.png" alt="Vegetarian icon">
+                                <img class="icon" src="/img/icon-10.png" alt="Gluten icon">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="read-more">
+                        <a href="#">Læs mere</a>
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)"><i class="ph-caret-left"></i></a>
+                <a class="next" onclick="plusSlides(1)"><i class="ph-caret-right"></i></a>
+                
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                  </div>
+    
+                  <div class="read-more">
+                    <a href="/opskrifter.html">Se alle opskrifter</a>
+                  </div>
+            </section>
+        </div>
+    
+        <div class="waste-how-wrapper">
+            <article class="waste fade-in from-bottom">
+                <h3>Hos Nippon er vi med til at 
+                    bekæmpe vi madspild <br>
+                    - og det er vi stolte af! </h3>
+                    <section>
+                        <br>
+                        <ul class="waste-list">
+                            <li class="waste-item">Vores måltider er pakket således at der er 
+                                de mængder du skal bruge 
+                                - ikke mere, ikke mindre </li>
+                            <li class="waste-item">Vi benytter varer ud fra deres smag og ikke 
+                                udseende! Vores grøntsager kan derfor godt 
+                                se deforme ud, men tag ikke fejl af smagen! </li>
+                        </ul>
+                        <article class="review-container-pc ">
+                            <h3 class="fade-in from-bottom">Det siger vores kunder om os</h3>
+                            <section class="review fade-in from-bottom">
+                                <p class="quote-mark">"</p>
+                                <p class="quote">Har virkelig været en kæmpe 
+                                    Hjælp at bruge Nippons 
+                                    Måltidskasser</p>
+                            </section>
+                            <section class="review right-side fade-in from-bottom">
+                                <p class="quote-mark">"</p>
+                                <p class="quote">Altid hurtig levering samt gode
+                                    opskrifter. </p>
+                            </section>
+                            <section class="review fade-in from-bottom">
+                                <p class="quote-mark">"</p>
+                                <p class="quote">Nippons opskrifter hjælper
+                                    mig med at gøre aftensmaden sjovere </p>
+                            </section>
+                            <section class="review-end fade-in from-bottom">
+                                <p>Fuld tilfredshedsgaranti! 
+                                    Kontakt os gerne, hvis du har 
+                                    været utilfreds med din bestilling hos os :) </p>
+                            </section>
+                        </article>
+                    </section>
+            </article>
+    
+            <article class="info" id="info">
+                <h3 class="fade-in from-bottom">Sådan fungere Nippons måltidskasser</h3>
+                <br><br>
+                <video id="how-to-vid" loop src="/video/motion-graphic.mp4" playsinline muted poster="/img/infog.png"></video>
+            </article>
+        </div>
+
+       
+
+        <article class="review-container ">
+            <h3 class="fade-in from-bottom">Det siger vores kunder om os</h3>
+            <section class="review fade-in from-bottom">
+                <p class="quote-mark">"</p>
+                <p class="quote">Har virkelig været en kæmpe 
+                    Hjælp at bruge Nippons 
+                    Måltidskasser</p>
+            </section>
+            <section class="review right-side fade-in from-bottom">
+                <p class="quote-mark">"</p>
+                <p class="quote">Altid hurtig levering samt gode
+                    opskrifter. </p>
+            </section>
+            <section class="review fade-in from-bottom">
+                <p class="quote-mark">"</p>
+                <p class="quote">Nippons opskrifter hjælper
+                    mig med at gøre aftensmaden sjovere </p>
+            </section>
+            <section class="review-end fade-in from-bottom">
+                <p>Fuld tilfredshedsgaranti! 
+                    Kontakt os gerne, hvis du har 
+                    været utilfreds med din bestilling hos os :) </p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <section class="contact">
+            <h4>Kontakt</h4>
+            <ul>
+                <li>nippon@nipponmail.dk</li>
+                <li>Tlf: 12 34 56 78</li>
+                <li>Nippongade 36, 1234 Nipponhus</li>
+            </ul>
+        </section>
+        <section class="so-me">
+            <h4>Sociale Medier</h4>
+            <ul>
+                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+            </ul>
+        </section>
+        <nav class="footer-nav">
+            <h4>Menupunkter</h4>
+            <ul>
+                <li><a href="/index.html">Forside</a></li>
+                <li><a href="/opskrifter.html">Opskrifter</a></li>
+                <li><a href="/about.html">Om Nippon</a></li>
+                <li><a href="/profil.html">Profil</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+    <script src="/js/main.js"></script>
+    <script src="/js/fadein.js"></script>
+    <script src="/js/slider.js"></script>
+    <script src="/js/video.js"></script>
+</body>
+</html>
